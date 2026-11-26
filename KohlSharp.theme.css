@@ -768,3 +768,12 @@ section[class*="panels_"] {
   border-top: 1px solid #313131;
 }
 
+#app-mount,
+#app-mount *,
+[role="textbox"],
+[role="textbox"] *,
+[data-slate-editor],
+[data-slate-editor] * {
+  font-variant-ligatures: none !important;
+  font-feature-settings: "liga" 0, "calt" 0, "dlig" 0 !important;
+}
