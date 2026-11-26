@@ -2,17 +2,16 @@
 
 A soft black and white Discord theme for Vencord with sharp corners, by **MJdev**.
 
+<img src="Kohl-palette.png" alt="Kohl colour palette and font" width="600">
+
 Version 1.2.0
 
 ## Features
 
 - Sharp corners throughout
 - Square profile pictures, with the circle behind them removed
-- Soft off-black background with off-white text, so contrast stays comfortable
 - Soft white highlight and white side bar on messages that ping you
-- Maple Mono across the interface, chat and code blocks
 - Monochrome buttons, links (underlined) and syntax highlighting
-- Muted colour kept for status, alerts, warnings and code diffs
 
 ## Requirements
 
@@ -31,22 +30,6 @@ The theme headers also list BetterDiscord as compatible.
 5. Enable the theme.
 
 **Updating:** replace the old file in the themes folder, then press `Ctrl+R`.
-
-## Colours
-
-| Use | Value |
-|---|---|
-| Background | `#151515` |
-| Input and code background | `#1c1c1c` |
-| Raised panel | `#1e1e1e` |
-| Border | `#313131` |
-| Body text | `#d4d4d4` |
-| Headings and names | `#e4e4e4` |
-| Muted text | `#9e9e9e` |
-| Green (online, success) | `#b5b96e` |
-| Yellow (idle, warning) | `#e7c37c` |
-| Red (busy, error) | `#d86f5e` |
-| Ping highlight | `rgba(228, 228, 228, 0.1)` |
 
 ## Customising
 
