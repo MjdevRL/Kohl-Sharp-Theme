@@ -1,6 +1,6 @@
 # KohlSharp
 
-A soft black and white Discord theme for Vencord with sharp corners, by **potatonot**.
+A soft black and white Discord theme for Vencord with sharp corners, by **MJdev**.
 
 Version 1.2.0
 
