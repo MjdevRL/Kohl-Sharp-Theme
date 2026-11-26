@@ -1,0 +1,768 @@
+/**
+ * @name          KohlSharp
+ * @version       1.2.0
+ * @description   A black and white theme with soft white ping highlights,
+ *                sharp corners and Maple Mono typography.
+ *                Compatible with BetterDiscord and Vencord.
+ *                Requires Discord's built-in Dark Mode to be enabled.
+ * @author        potatonot
+ */
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5/400.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5/400-italic.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5/500.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5/600.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5/700.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5/700-italic.css");
+.visual-refresh.theme-dark, .visual-refresh .theme-dark {
+  --__header-bar-background: #151515     !important;
+  --background-surface-high: #1a1a1a   !important;
+  --background-surface-higher: #202020     !important;
+  --background-surface-highest: #282828     !important;
+  --background-base-lowest: #151515 !important;
+  --background-base-lower: #151515     !important;
+  --background-base-low: #151515   !important;
+  --bg-surface-raised: #1e1e1e;
+  --background-gradient-highest: #151515;
+  --background-secondary-alt: #1e1e1e     !important;
+  --background-accent: #313131     !important;
+  --background-mod-muted: rgba(228, 228, 228, 0.03);
+  --background-mod-normal: rgba(228, 228, 228, 0.09);
+  --background-mod-subtle: rgba(228, 228, 228, 0.06) !important;
+  --background-mod-strong: rgba(228, 228, 228, 0.14) !important;
+  --app-frame-background: #151515;
+  --home-background: #151515;
+  --chat-background: #151515;
+  --chat-background-default: #151515;
+  --chat-border: #272727;
+  --chat-text-muted: #9e9e9e;
+  --card-background-default: #1c1c1c     !important;
+  --custom-channel-members-bg: #151515;
+  --custom-status-bubble-background: #242424 !important;
+  --custom-status-bubble-background-color: #242424     !important;
+  --border-subtle: #272727 !important;
+  --border-muted: #313131;
+  --border-normal: #313131;
+  --border-strong: #474747;
+  --text-muted: #9e9e9e    !important;
+  --text-link: #e4e4e4 !important;
+  --text-default: #d4d4d4;
+  --text-strong: #e4e4e4    !important;
+  --text-subtle: #c4c4c4;
+  --text-brand: #e4e4e4;
+  --text-feedback-positive: #b5b96e;
+  --text-feedback-critical: #d86f5e;
+  --text-feedback-warning: #e7c37c;
+  --text-feedback-info: #e4e4e4;
+  --text-status-online: #b5b96e;
+  --text-status-idle: #e7c37c;
+  --text-status-dnd: #d86f5e;
+  --text-status-offline: #9e9e9e;
+  --interactive-muted: #444444;
+  --interactive-icon-default: #d4d4d4 !important;
+  --interactive-icon-hover: #d4d4d4;
+  --interactive-icon-active: #d4d4d4;
+  --interactive-text-default: #d4d4d4 !important;
+  --interactive-text-hover: #d4d4d4;
+  --interactive-text-active: #d4d4d4;
+  --interactive-background-hover: rgba(228, 228, 228, 0.08);
+  --interactive-background-selected: rgba(228, 228, 228, 0.13);
+  --interactive-background-active: rgba(228, 228, 228, 0.17);
+  --channels-default: #9e9e9e   !important;
+  --channel-icon: #9e9e9e   !important;
+  --channel-text-area-placeholder: rgba(228, 228, 228, 0.5);
+  --channeltextarea-background: #1c1c1c;
+  --control-brand-foreground: #e4e4e4;
+  --control-brand-foreground-new: #e4e4e4;
+  --brand-100: #dedede;
+  --brand-130: #d8d8d8;
+  --brand-160: #d3d3d3;
+  --brand-200: #e3e3e3;
+  --brand-230: #d9d9d9;
+  --brand-260: #cfcfcf;
+  --brand-300: #c7c7c7;
+  --brand-330: #bfbfbf;
+  --brand-360: #b3b3b3;
+  --brand-400: #8c8c8c;
+  --brand-430: #737373;
+  --brand-460: #5c5c5c;
+  --brand-500: #4a4a4a !important;
+  --brand-530: #3a3a3a;
+  --brand-560: #3d3d3d;
+  --brand-600: #2e2e2e;
+  --brand-630: #2a2a2a;
+  --brand-660: #313131;
+  --brand-700: #222222;
+  --brand-730: #1e1e1e;
+  --brand-760: #282828;
+  --brand-800: #161616;
+  --brand-830: #131313;
+  --brand-860: #101010;
+  --brand-900: #1e1e1e;
+  --brand-05a: rgba(228, 228, 228, 0.05);
+  --brand-10a: rgba(228, 228, 228, 0.1);
+  --brand-15a: rgba(228, 228, 228, 0.15);
+  --brand-20a: rgba(228, 228, 228, 0.2);
+  --brand-25a: rgba(228, 228, 228, 0.25);
+  --brand-30a: rgba(228, 228, 228, 0.3);
+  --brand-35a: rgba(228, 228, 228, 0.35);
+  --brand-40a: rgba(228, 228, 228, 0.4);
+  --brand-45a: rgba(228, 228, 228, 0.45);
+  --brand-50a: rgba(228, 228, 228, 0.5);
+  --brand-55a: rgba(228, 228, 228, 0.55);
+  --brand-60a: rgba(228, 228, 228, 0.6);
+  --brand-65a: rgba(228, 228, 228, 0.65);
+  --brand-70a: rgba(228, 228, 228, 0.7);
+  --brand-75a: rgba(228, 228, 228, 0.75);
+  --brand-80a: rgba(228, 228, 228, 0.8);
+  --brand-85a: rgba(228, 228, 228, 0.85);
+  --brand-90a: rgba(228, 228, 228, 0.9);
+  --brand-95a: rgba(228, 228, 228, 0.95);
+  --opacity-blurple-8: rgba(228, 228, 228, 0.08);
+  --opacity-blurple-16: rgba(228, 228, 228, 0.16);
+  --opacity-blurple-24: rgba(228, 228, 228, 0.24);
+  --opacity-blurple-32: rgba(228, 228, 228, 0.32);
+  --opacity-blurple-60: rgba(228, 228, 228, 0.6);
+  --blurple-50: #363636;
+  --blurple-60: #cdcdcd;
+  --control-primary-background-default: #363636;
+  --control-primary-background-hover: #4a4a4a;
+  --control-primary-background-active: #4a4a4a;
+  --control-secondary-background-default: #282828 !important;
+  --control-secondary-background-hover: #363636;
+  --control-secondary-background-active: #363636;
+  --control-secondary-border-default: #3d3d3d;
+  --control-secondary-text-default: #d4d4d4 !important;
+  --control-secondary-text-hover: #d4d4d4;
+  --control-critical-primary-background-default: #ae4f44;
+  --control-critical-primary-background-hover: #d86f5e;
+  --control-critical-primary-background-active: #d86f5e;
+  --control-critical-primary-text-default: #151515;
+  --control-critical-primary-text-hover: #151515;
+  --control-critical-secondary-background-default: transparent;
+  --control-critical-secondary-background-hover: rgba(216, 111, 94, 0.15);
+  --control-critical-secondary-background-active: rgba(216, 111, 94, 0.2);
+  --control-critical-secondary-border-default: #d86f5e;
+  --control-critical-secondary-border-hover: #d86f5e;
+  --control-critical-secondary-border-active: #d86f5e;
+  --control-critical-secondary-text-default: #d4d4d4;
+  --control-critical-secondary-text-hover: #151515;
+  --control-critical-secondary-text-active: #151515;
+  --control-connected-background-default: #b5b96e;
+  --control-connected-background-hover: #cace7a;
+  --control-connected-background-active: #b5b96e;
+  --control-connected-border-default: #b5b96e;
+  --control-connected-border-hover: #cace7a;
+  --control-connected-border-active: #cace7a;
+  --button-outline-primary-text: #d4d4d4;
+  --button-outline-brand-text: #d4d4d4;
+  --button-outline-brand-background-hover: rgba(228, 228, 228, 0.3);
+  --button-outline-brand-border-active: #e4e4e4;
+  --status-positive: #b5b96e;
+  --status-positive-background: #b5b96e;
+  --status-positive-text: #151515;
+  --status-warning: #e7c37c;
+  --status-warning-background: #e7c37c;
+  --status-warning-text: #151515;
+  --status-danger: #d86f5e;
+  --icon-status-online: #b5b96e;
+  --icon-status-idle: #e7c37c;
+  --icon-status-dnd: #d86f5e;
+  --icon-status-offline: #9e9e9e;
+  --background-feedback-positive: rgba(181, 185, 110, 0.15);
+  --background-feedback-warning: rgba(231, 195, 124, 0.15);
+  --background-feedback-critical: rgba(216, 111, 94, 0.15);
+  --background-feedback-info: rgba(228, 228, 228, 0.15);
+  --background-feedback-notification: #d86f5e;
+  --badge-notification-background: #d86f5e;
+  --icon-feedback-positive: #b5b96e;
+  --icon-feedback-warning: #e7c37c;
+  --icon-feedback-critical: #d86f5e;
+  --icon-feedback-info: #e4e4e4;
+  --icon-feedback-notification: #d86f5e;
+  --notice-background-critical: #d86f5e;
+  --notice-background-info: #cdcdcd;
+  --notice-background-positive: #b5b96e;
+  --notice-background-warning: #e7c37c;
+  --notice-text-critical: #151515;
+  --notice-text-info: #151515;
+  --notice-text-positive: #151515;
+  --notice-text-warning: #151515;
+  --mention-foreground: #e4e4e4;
+  --mention-background: rgba(228, 228, 228, 0.18);
+  --message-mentioned-background-default: rgba(228, 228, 228, 0.1);
+  --message-mentioned-background-hover: rgba(228, 228, 228, 0.13);
+  --message-automod-background-default: rgba(174, 79, 68, 0.05);
+  --message-automod-background-hover: rgba(174, 79, 68, 0.1);
+  --message-highlight-background-default: rgba(228, 228, 228, 0.1);
+  --message-highlight-background-hover: rgba(228, 228, 228, 0.13);
+  --message-reacted-background-default: rgba(228, 228, 228, 0.3) !important;
+  --message-reacted-text-default: #4a4a4a;
+  --message-background-hover: rgba(228, 228, 228, 0.04) !important;
+  --background-code: #1c1c1c;
+  --spoiler-revealed-background: #1e1e1e;
+  --spoiler-hidden-background: #313131;
+  --__spoiler-background-color--hidden: #313131;
+  --__spoiler-warning-background-color: #444444;
+  --input-background-default: #1c1c1c;
+  --input-text-default: #d4d4d4;
+  --input-placeholder-text-default: rgba(228, 228, 228, 0.5);
+  --input-border-default: #313131;
+  --icon-muted: #444444   !important;
+  --icon-voice-muted: #d86f5e;
+  --icon-default: #d4d4d4;
+  --icon-strong: #e4e4e4;
+  --icon-subtle: #c4c4c4;
+  --scrollbar-thin-thumb: #313131;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #313131;
+  --scrollbar-auto-track: #151515;
+  --scrollbar-auto-scrollbar-color-thumb: #313131;
+  --scrollbar-auto-scrollbar-color-track: #151515;
+  --user-profile-overlay-background: #1a1a1a;
+  --user-profile-overlay-background-hover: #242424;
+  --modal-background: #181818 !important;
+  --modal-footer-background: #181818;
+  --logo-primary: #e4e4e4;
+  --__adaptive-focus-ring-color: #e4e4e4;
+  --textbox-markdown-syntax: #737373;
+  --checkbox-border-default: #444444;
+  --checkbox-icon-active: #e4e4e4;
+  --radio-thumb-background-active: #e4e4e4;
+  --plum-23: #151515;
+  --badge-text-brand: #e4e4e4;
+  --white: #d4d4d4;
+  --white-500: #d4d4d4;
+  --black-500: #151515;
+  --green-360: #b5b96e;
+  --green-300: #b5b96e;
+  --yellow-360: #e7c37c;
+  --yellow-300: #e7c37c;
+  --red-400: #d86f5e;
+  --red-430: #c35f52;
+  --red-500: #ae4f44;
+  --blue-500: #363636;
+  --blue-530: #4a4a4a;
+  --primary-100: #c4c4c4;
+  --primary-200: #9e9e9e;
+  --primary-300: #c4c4c4;
+  --primary-400: #c4c4c4;
+  --primary-630: #1e1e1e;
+  --primary-700: #313131;
+  --primary-800: #151515;
+  --twitch: #c4c4c4;
+  --playstation: #4a4a4a;
+  --spotify: #e4e4e4;
+  --guild-boosting-pink: #cdcdcd;
+  --guild-boosting-blue: #4a4a4a;
+  --guild-boosting-purple: #c4c4c4;
+  --premium-perk-yellow: #e7c37c;
+  --premium-perk-purple: #c4c4c4;
+  --premium-perk-dark-blue: #4a4a4a;
+  --premium-perk-light-blue: #cdcdcd;
+  --premium-perk-blue: #4a4a4a;
+  --premium-perk-green: #b5b96e;
+  --premium-perk-pink: #c4c4c4;
+  --premium-perk-orange: #e7c37c;
+  --premium-tier-0-blue: #4a4a4a;
+  --premium-tier-0-purple: #c4c4c4;
+  --premium-tier-1-blue-for-gradients: #cdcdcd;
+  --premium-tier-1-dark-blue-for-gradients: #4a4a4a;
+  --premium-tier-2-purple-for-gradients: #c4c4c4;
+  --premium-tier-2-purple-for-gradients-2: #9e9e9e;
+  --premium-tier-2-pink-for-gradients: #c4c4c4;
+}
+
+.visual-refresh.theme-dark :is( button[class*="button_"][class*="lookFilled_"][class*="colorGreen_"], button[class*="colorable_"][class*="join_"]   ), .visual-refresh .theme-dark :is( button[class*="button_"][class*="lookFilled_"][class*="colorGreen_"], button[class*="colorable_"][class*="join_"]   ) {
+  color: #151515 !important;
+}
+
+.visual-refresh.theme-dark :is( div[class^="item_"][class*="addFriend_"], div[class^="numberBadge_"][style*="background-color: var(--background-feedback-notification);"], div[class^="numberBadge_"][style*="background-color: var(--badge-notification-background);"], div[class*="iconBadge_"][class*="isCurrentUserConnected_"], span[class*="botTag_"], span[class^="unreadPill_"], div[class^="listItem_"] div[class^="wrapper_"] [class*="selected_"], div[class^="icon_"][class*="noIcon_"], button[class^="container_"] > div[class^="icon_"] > svg, div[class^="newBadge_"], button[class*="button_"][class*="lookFilled_"][class*="colorRed_"], button[class*="button_"][class*="lookFilled_"][class*="colorGreen_"], button[class*="button_"][class*="lookFilled_"][class*="colorLink_"], button[class*="button_"][class*="lookFilled_"][class*="colorBrand_"], button[class*="colorable_"][class*="join_"], svg[class^="status_"], svg[class^="dots_"], div[class*="textBadge_"][class*="base_"], svg[class^="descriptionIcon_"], div[class^="uploadDropModal_"], svg[class^="stepIcon_"], svg[class^="activeIcon_"], div[class*="tooltipBrand_"], div[class*="tooltipGreen_"], span[class*="planOptionDiscount_"], div[class*="memberCount_"], svg[class*="flowerStar_"] + div[class*="childContainer_"], div[class*="streamerModeEnabledBtn_"], div[class*="nowPlaying_"], div[class^="pageControlContainer_"],     [class*="notice_"][class*="colorBrand_"],     [class*="colorStreamerMode_"],     [class*="colorSpotify_"],     [class*="colorPremium_"],     [class*="colorPlayStation_"], .interactive:hover   ), .visual-refresh .theme-dark :is( div[class^="item_"][class*="addFriend_"], div[class^="numberBadge_"][style*="background-color: var(--background-feedback-notification);"], div[class^="numberBadge_"][style*="background-color: var(--badge-notification-background);"], div[class*="iconBadge_"][class*="isCurrentUserConnected_"], span[class*="botTag_"], span[class^="unreadPill_"], div[class^="listItem_"] div[class^="wrapper_"] [class*="selected_"], div[class^="icon_"][class*="noIcon_"], button[class^="container_"] > div[class^="icon_"] > svg, div[class^="newBadge_"], button[class*="button_"][class*="lookFilled_"][class*="colorRed_"], button[class*="button_"][class*="lookFilled_"][class*="colorGreen_"], button[class*="button_"][class*="lookFilled_"][class*="colorLink_"], button[class*="button_"][class*="lookFilled_"][class*="colorBrand_"], button[class*="colorable_"][class*="join_"], svg[class^="status_"], svg[class^="dots_"], div[class*="textBadge_"][class*="base_"], svg[class^="descriptionIcon_"], div[class^="uploadDropModal_"], svg[class^="stepIcon_"], svg[class^="activeIcon_"], div[class*="tooltipBrand_"], div[class*="tooltipGreen_"], span[class*="planOptionDiscount_"], div[class*="memberCount_"], svg[class*="flowerStar_"] + div[class*="childContainer_"], div[class*="streamerModeEnabledBtn_"], div[class*="nowPlaying_"], div[class^="pageControlContainer_"],     [class*="notice_"][class*="colorBrand_"],     [class*="colorStreamerMode_"],     [class*="colorSpotify_"],     [class*="colorPremium_"],     [class*="colorPlayStation_"], .interactive:hover   ) {
+  --white: #e4e4e4;
+  --white-500: #e4e4e4;
+}
+
+.visual-refresh.theme-dark ::selection, .visual-refresh .theme-dark ::selection {
+  background-color: rgba(228, 228, 228, 0.28);
+}
+
+.visual-refresh.theme-dark button.vc-btn-primary, .visual-refresh .theme-dark button.vc-btn-primary {
+  color: #e4e4e4 !important;
+  background-color: #363636 !important;
+}
+
+.visual-refresh.theme-dark button.vc-btn-primary:hover, .visual-refresh.theme-dark button.vc-btn-primary:active, .visual-refresh .theme-dark button.vc-btn-primary:hover, .visual-refresh .theme-dark button.vc-btn-primary:active {
+  background-color: #4a4a4a !important;
+}
+
+.visual-refresh.theme-dark button.vc-btn-positive, .visual-refresh .theme-dark button.vc-btn-positive {
+  color: #151515 !important;
+}
+
+.visual-refresh.theme-dark button[class^="button_"][class*=" primary_"], .visual-refresh .theme-dark button[class^="button_"][class*=" primary_"] {
+  color: #e4e4e4 !important;
+  background-color: #363636 !important;
+}
+
+.visual-refresh.theme-dark button[class^="button_"][class*=" primary_"]:hover, .visual-refresh.theme-dark button[class^="button_"][class*=" primary_"]:active, .visual-refresh .theme-dark button[class^="button_"][class*=" primary_"]:hover, .visual-refresh .theme-dark button[class^="button_"][class*=" primary_"]:active {
+  background-color: #4a4a4a !important;
+}
+
+.visual-refresh.theme-dark label[class^="container_"] > div[data-mana-component="switch"], .visual-refresh .theme-dark label[class^="container_"] > div[data-mana-component="switch"] {
+  background-color: #444444 !important;
+  border: unset !important;
+  transition: background-color 0.2s;
+}
+
+.visual-refresh.theme-dark label[class^="container_"] > div[data-mana-component="switch"]:hover, .visual-refresh .theme-dark label[class^="container_"] > div[data-mana-component="switch"]:hover {
+  background-color: #313131 !important;
+}
+
+.visual-refresh.theme-dark label[class^="container_"] > div[data-mana-component="switch"] > svg > rect, .visual-refresh .theme-dark label[class^="container_"] > div[data-mana-component="switch"] > svg > rect {
+  fill: #d4d4d4;
+  transition: fill 0.2s;
+}
+
+.visual-refresh.theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked), .visual-refresh .theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked) {
+  background-color: #4a4a4a !important;
+}
+
+.visual-refresh.theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked):hover, .visual-refresh .theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked):hover {
+  background-color: #363636 !important;
+}
+
+.visual-refresh.theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked) > svg > rect, .visual-refresh .theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked) > svg > rect {
+  fill: #151515;
+}
+
+.visual-refresh.theme-dark div.vc-switch-container, .visual-refresh .theme-dark div.vc-switch-container {
+  --primary-400: #444444;
+}
+
+.visual-refresh.theme-dark div.vc-switch-container svg.vc-switch-slider > rect, .visual-refresh .theme-dark div.vc-switch-container svg.vc-switch-slider > rect {
+  fill: #d4d4d4;
+  transition: fill 0.2s;
+}
+
+.visual-refresh.theme-dark div.vc-switch-container.vc-switch-checked > svg.vc-switch-slider > rect, .visual-refresh .theme-dark div.vc-switch-container.vc-switch-checked > svg.vc-switch-slider > rect {
+  fill: #151515;
+}
+
+/* Discord's own font variables, so elements that set their own font follow too */
+:root, .visual-refresh {
+  --font-primary: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace !important;
+  --font-display: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace !important;
+  --font-headline: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace !important;
+  --font-code: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace !important;
+}
+
+#app-mount {
+  font-family: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace;
+  letter-spacing: -0.01em;
+}
+
+#app-mount [class*="markup"],
+#app-mount [class*="markup"] *,
+#app-mount [class*="messageContent"],
+#app-mount [class*="messageContent"] * {
+  font-family: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace;
+  letter-spacing: 0;
+}
+
+[role="textbox"],
+[role="textbox"] *,
+[data-slate-editor],
+[data-slate-editor] * {
+  font-family: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace !important;
+  letter-spacing: 0 !important;
+}
+
+div[class*="accountProfileCard_"] *,
+div[class*="nameTag_"] *,
+div[class*="customStatus_"] * {
+  font-family: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+}
+
+code,
+pre,
+#app-mount [class*="markup"] code,
+#app-mount [class*="markup"] pre {
+  font-family: 'Maple Mono', 'Maple Mono NF', 'Consolas', monospace !important;
+  background-color: #151515 !important;
+  border: 1px solid #313131 !important;
+}
+
+.visual-refresh.theme-dark.hljs, .visual-refresh .theme-dark.hljs {
+  color: #d4d4d4;
+  background: #1c1c1c;
+}
+
+.visual-refresh.theme-dark .hljs-keyword, .visual-refresh .theme-dark .hljs-keyword {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-built_in, .visual-refresh .theme-dark .hljs-built_in {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-type, .visual-refresh .theme-dark .hljs-type {
+  color: #c8c8c8;
+}
+
+.visual-refresh.theme-dark .hljs-literal, .visual-refresh .theme-dark .hljs-literal {
+  color: #cccccc;
+}
+
+.visual-refresh.theme-dark .hljs-number, .visual-refresh .theme-dark .hljs-number {
+  color: #cccccc;
+}
+
+.visual-refresh.theme-dark .hljs-operator, .visual-refresh .theme-dark .hljs-operator {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-punctuation, .visual-refresh .theme-dark .hljs-punctuation {
+  color: #c4c4c4;
+}
+
+.visual-refresh.theme-dark .hljs-property, .visual-refresh .theme-dark .hljs-property {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-regexp, .visual-refresh .theme-dark .hljs-regexp {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-string, .visual-refresh .theme-dark .hljs-string {
+  color: #bdbdbd;
+}
+
+.visual-refresh.theme-dark .hljs-char.escape_, .visual-refresh .theme-dark .hljs-char.escape_ {
+  color: #bdbdbd;
+}
+
+.visual-refresh.theme-dark .hljs-subst, .visual-refresh .theme-dark .hljs-subst {
+  color: #8f8f8f;
+}
+
+.visual-refresh.theme-dark .hljs-symbol, .visual-refresh .theme-dark .hljs-symbol {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-variable, .visual-refresh .theme-dark .hljs-variable {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-variable.language_, .visual-refresh .theme-dark .hljs-variable.language_ {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-variable.constant_, .visual-refresh .theme-dark .hljs-variable.constant_ {
+  color: #cccccc;
+}
+
+.visual-refresh.theme-dark .hljs-title, .visual-refresh .theme-dark .hljs-title {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-title.class_, .visual-refresh .theme-dark .hljs-title.class_ {
+  color: #c8c8c8;
+}
+
+.visual-refresh.theme-dark .hljs-title.function_, .visual-refresh .theme-dark .hljs-title.function_ {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-params, .visual-refresh .theme-dark .hljs-params {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-comment, .visual-refresh .theme-dark .hljs-comment {
+  color: #8f8f8f;
+}
+
+.visual-refresh.theme-dark .hljs-doctag, .visual-refresh .theme-dark .hljs-doctag {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-meta, .visual-refresh .theme-dark .hljs-meta {
+  color: #cccccc;
+}
+
+.visual-refresh.theme-dark .hljs-section, .visual-refresh .theme-dark .hljs-section {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-tag, .visual-refresh .theme-dark .hljs-tag {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-name, .visual-refresh .theme-dark .hljs-name {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-attr, .visual-refresh .theme-dark .hljs-attr {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-attribute, .visual-refresh .theme-dark .hljs-attribute {
+  color: #bdbdbd;
+}
+
+.visual-refresh.theme-dark .hljs-bullet, .visual-refresh .theme-dark .hljs-bullet {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-code, .visual-refresh .theme-dark .hljs-code {
+  color: #bdbdbd;
+}
+
+.visual-refresh.theme-dark .hljs-emphasis, .visual-refresh .theme-dark .hljs-emphasis {
+  color: #e4e4e4;
+  font-style: italic;
+}
+
+.visual-refresh.theme-dark .hljs-strong, .visual-refresh .theme-dark .hljs-strong {
+  color: #e4e4e4;
+  font-weight: bold;
+}
+
+.visual-refresh.theme-dark .hljs-formula, .visual-refresh .theme-dark .hljs-formula {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-link, .visual-refresh .theme-dark .hljs-link {
+  color: #d4d4d4;
+  font-style: italic;
+}
+
+.visual-refresh.theme-dark .hljs-quote, .visual-refresh .theme-dark .hljs-quote {
+  color: #bdbdbd;
+  font-style: italic;
+}
+
+.visual-refresh.theme-dark .hljs-selector-tag, .visual-refresh .theme-dark .hljs-selector-tag {
+  color: #c8c8c8;
+}
+
+.visual-refresh.theme-dark .hljs-selector-id, .visual-refresh .theme-dark .hljs-selector-id {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-selector-class, .visual-refresh .theme-dark .hljs-selector-class {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-selector-attr, .visual-refresh .theme-dark .hljs-selector-attr {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-selector-pseudo, .visual-refresh .theme-dark .hljs-selector-pseudo {
+  color: #d4d4d4;
+}
+
+.visual-refresh.theme-dark .hljs-template-tag, .visual-refresh .theme-dark .hljs-template-tag {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-template-variable, .visual-refresh .theme-dark .hljs-template-variable {
+  color: #e4e4e4;
+}
+
+.visual-refresh.theme-dark .hljs-addition, .visual-refresh .theme-dark .hljs-addition {
+  color: #b5b96e;
+  background: rgba(181, 185, 110, 0.15);
+}
+
+.visual-refresh.theme-dark .hljs-deletion, .visual-refresh .theme-dark .hljs-deletion {
+  color: #d86f5e;
+  background: rgba(216, 111, 94, 0.15);
+}
+
+:is(.visual-refresh.theme-dark, .visual-refresh .theme-dark) button[class*="button_"][class*="lookFilled_"][class*="colorBrand_"] {
+  background-color: #151515 !important;
+  color: #e4e4e4 !important;
+}
+
+:is(.visual-refresh.theme-dark, .visual-refresh .theme-dark) button[class*="button_"][class*="lookFilled_"][class*="colorBrand_"]:hover {
+  background-color: #4a4a4a !important;
+}
+
+section[class*="panels_"] {
+  background-color: #151515 !important;
+}
+
+[class^="privateChannels_"] button:has([class^="buttonChildrenWrapper_"]) {
+  background-color: #151515 !important;
+}
+
+div[class*="reaction_"] {
+  background-color: #1e1e1e !important;
+  border: 1px solid #313131 !important;
+}
+
+div[class*="reactionMe_"] {
+  background-color: rgba(228, 228, 228, 0.2) !important;
+  border: 1px solid #e4e4e4 !important;
+}
+
+div[class*="newMessagesBar_"] {
+  background-color: #363636 !important;
+}
+
+.bd-addon-list .bd-addon-card {
+  border: 1px solid #313131;
+  background-color: #151515;
+  margin-bottom: 18px;
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0 !important;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0 !important;
+}
+
+foreignObject[mask] {
+  mask: none !important;
+}
+
+[class*="mask"] circle[fill="black"],
+[class*="svg"] circle[fill="black"],
+[class*="mask"] circle[fill="white"],
+[class*="svg"] circle[fill="white"],
+[class*="mask"] rect[fill="black"],
+[class*="svg"] rect[fill="black"] {
+  display: none !important;
+}
+
+rect[mask*="status"] {
+  stroke: #151515 !important;
+  stroke-width: 10px !important;
+  paint-order: stroke fill !important;
+}
+
+foreignObject[width="20"][height="20"]:has(~ g),
+foreignObject[width="24"][height="24"]:has(~ g),
+foreignObject[width="32"][height="32"]:has(~ g),
+foreignObject[width="40"][height="40"]:has(~ g) {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 65%, 65% 65%, 65% 100%, 0% 100%) !important;
+}
+
+foreignObject[width="32"][height="32"]:has(~ g rect[mask="url(#svg-mask-status-online-mobile)"]),
+foreignObject[width="40"][height="40"]:has(~ g rect[mask="url(#svg-mask-status-online-mobile)"]) {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 49%, 65% 49%, 65% 100%, 0% 100%) !important;
+}
+
+foreignObject[width="80"][height="80"][mask] ~ g rect {
+  transform: translate(16px, 16px) !important;
+}
+
+foreignObject[width="80"][height="80"]:has(~ g rect[mask="url(#svg-mask-status-online-mobile)"]) {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 95% 90%, 95% 100%, 0% 100%) !important;
+}
+
+foreignObject[width="120"][height="120"][mask] ~ g rect {
+  transform: translate(25px, 25px) !important;
+}
+
+foreignObject[width="120"][height="120"]:has(~ g rect[mask="url(#svg-mask-status-online-mobile)"]) {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 88.7%, 95% 88.7%, 95% 100%, 0% 100%) !important;
+}
+
+foreignObject [class*="avatarStack_"],
+foreignObject [class*="avatarStack_"]::after,
+foreignObject [class*="avatarStack_"] > * {
+  clip-path: none !important;
+  border-radius: 0 !important;
+}
+
+/* ---------- Profile: remove the circle behind the avatar ---------- */
+
+/* Circular cut-out in the profile banner (SVG mask or CSS mask).
+   The first selector in each rule matches on structure, so it keeps
+   working when Discord renames its classes. */
+svg:has(> mask):has(> foreignObject) > foreignObject,
+[class*="bannerSVGWrapper"] > foreignObject,
+[class*="user-profile"] foreignObject,
+[class*="user-profile"] [class*="banner"] {
+  -webkit-mask: none !important;
+  mask: none !important;
+}
+
+svg:has(> foreignObject) > mask > circle,
+[class*="bannerSVGWrapper"] mask > circle,
+[class*="user-profile"] mask > circle {
+  r: 0 !important;
+}
+
+/* Round pseudo-elements (not matched by the * selector) */
+[class*="avatar"]::before,
+[class*="avatar"]::after,
+[class*="overlay_"]::after,
+[class*="statusBubble"]::before,
+[class*="statusBubble"]::after,
+[class*="user-profile"] *::before,
+[class*="user-profile"] *::after {
+  border-radius: 0 !important;
+}
+
+/* ---------- Muted status dots ---------- */
+
+rect[mask^="url(#svg-mask-status-online"]  { fill: #b5b96e !important; }
+rect[mask^="url(#svg-mask-status-idle"]    { fill: #e7c37c !important; }
+rect[mask^="url(#svg-mask-status-dnd"]     { fill: #d86f5e !important; }
+rect[mask^="url(#svg-mask-status-offline"] { fill: #9e9e9e !important; }
+
+/* ---------- Black and white finishing rules ---------- */
+
+/* Soft white highlight on messages that ping you */
+[class*="message_"][class*="mentioned_"] {
+  background-color: rgba(228, 228, 228, 0.1) !important;
+}
+
+[class*="message_"][class*="mentioned_"]:hover {
+  background-color: rgba(228, 228, 228, 0.13) !important;
+}
+
+[class*="message_"][class*="mentioned_"]::before {
+  background-color: rgba(228, 228, 228, 0.85) !important;
+}
+
+/* The @name pill itself */
+[class*="markup"] [class*="mention"][class*="wrapper"] {
+  color: #e4e4e4 !important;
+  background-color: rgba(228, 228, 228, 0.18) !important;
+}
+
+[class*="markup"] [class*="mention"][class*="wrapper"]:hover {
+  background-color: rgba(228, 228, 228, 0.3) !important;
+}
+
+/* Links are white, so underline them */
+[class*="markup"] a {
+  text-decoration: underline;
+}
+
+/* Switches: white when on, black knob */
+.visual-refresh.theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked),
+.visual-refresh .theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked) {
+  background-color: #e4e4e4 !important;
+}
+
+.visual-refresh.theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked):hover,
+.visual-refresh .theme-dark label[class^="container_"] > div[data-mana-component="switch"]:has(+ span > input:checked):hover {
+  background-color: #c4c4c4 !important;
+}
+
+/* Thin edges so black panels stay separate */
+section[class*="panels_"] {
+  border-top: 1px solid #313131;
+}
+
